@@ -8,4 +8,4 @@ This repository contains the labs for **Image Processing and Computer Vision** f
 
 The datasets for all experiments are available on Google Drive:
 
-[Datasets Link](https://drive.google.com/drive/folders/11DOtq1mWI2eS2k6WMeRSAGgEZE-cvkOn?usp=sharing)
+[link for datasets](https://drive.google.com/drive/folders/11DOtq1mWI2eS2k6WMeRSAGgEZE-cvkOn?usp=sharing)
