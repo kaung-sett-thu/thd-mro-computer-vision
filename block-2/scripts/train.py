@@ -18,7 +18,7 @@ model = YOLO("yolov8n.pt")
 #     imgsz=640,
 #     batch=16,
 #     project=RESULTS_DIR,
-#     name="exp_1",
+#     name="exp_2",
 #     exist_ok=True,
 
 #     # augmentation parameters
@@ -36,11 +36,11 @@ model = YOLO("yolov8n.pt")
 model.train(
     # training parameters
     data=DATA_YAML,
-    epochs=40,
+    epochs=100,
     imgsz=640,
     batch=16,
     project=RESULTS_DIR,
-    name="exp_2",
+    name="exp_3",
     exist_ok=True,
 
     lr0=0.001,            # lower learning rate
@@ -57,13 +57,13 @@ model.train(
 )
 
 # validate the model 
-best_model_path = os.path.join(RESULTS_DIR, "exp_final/weights/best.pt")
+best_model_path = os.path.join(RESULTS_DIR, "exp_3/weights/best.pt")
 metrics = model.val(model=best_model_path, data=DATA_YAML)
 print("Validation metrics:", metrics)
 
 # test the model using test images
 TEST_IMAGES = "../dataset/test/images"  # folder with test images
-output_dir = os.path.join(RESULTS_DIR, "exp_final/predictions")
+output_dir = os.path.join(RESULTS_DIR, "exp_3/predictions")
 
 results = model.predict(
     source=TEST_IMAGES,
